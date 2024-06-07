@@ -27,8 +27,9 @@ if __name__ == '__main__':
     parameters = list(encoder.parameters()) + list(decoder.parameters())
     opt = Adam(lr=0.003, params=parameters)
 
+
     # Training loop
-    for epoch in range(5):
+    for epoch in range(50):
         for images, _ in tqdm(trainloader):  # if tqdm gives you trouble just remove it
             b, c, h, w = images.size()
 

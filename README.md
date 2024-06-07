@@ -1,6 +1,6 @@
 # ai_for_logic_synthesis_for_ai
 
-need torch, torchvision, tqdm, onnx, numpy, matplotlib
+need torch, torchvision, tqdm, onnx, numpy, matplotlib, torchviz, netron
 
 Notes on model from Peter Bloem: We are cheating a little with the output activation. To truly follow the derivation of the VAE, this should define a distribution in the data space (which are continuous numbers _between_ 0 and 1). In this case, we use a sigmoid activation with a binary cross-entropy, which would be a distribution for binary data (either 0 or 1). 
 

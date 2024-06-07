@@ -1,0 +1,68 @@
+digraph {
+	graph [size="12,12"]
+	node [align=left fontname=monospace fontsize=10 height=0.2 ranksep=0.1 shape=box style=filled]
+	5538491248 [label="
+ (1, 10)" fillcolor=darkolivegreen1]
+	5537660112 [label=AddmmBackward0]
+	5537660304 -> 5537660112
+	5485283472 [label="fc4.bias
+ (10)" fillcolor=lightblue]
+	5485283472 -> 5537660304
+	5537660304 [label=AccumulateGrad]
+	5537660208 -> 5537660112
+	5537660208 [label=ReluBackward0]
+	5537659776 -> 5537660208
+	5537659776 [label=AddmmBackward0]
+	5537660496 -> 5537659776
+	5485284432 [label="fc3.bias
+ (128)" fillcolor=lightblue]
+	5485284432 -> 5537660496
+	5537660496 [label=AccumulateGrad]
+	5537660448 -> 5537659776
+	5537660448 [label=ReluBackward0]
+	5537660544 -> 5537660448
+	5537660544 [label=AddmmBackward0]
+	5537660736 -> 5537660544
+	5485284048 [label="fc2.bias
+ (256)" fillcolor=lightblue]
+	5485284048 -> 5537660736
+	5537660736 [label=AccumulateGrad]
+	5537660688 -> 5537660544
+	5537660688 [label=ReluBackward0]
+	5537660832 -> 5537660688
+	5537660832 [label=AddmmBackward0]
+	5538791584 -> 5537660832
+	5485282896 [label="fc1.bias
+ (512)" fillcolor=lightblue]
+	5485282896 -> 5538791584
+	5538791584 [label=AccumulateGrad]
+	5538791536 -> 5537660832
+	5538791536 [label=TBackward0]
+	5538791632 -> 5538791536
+	5485281840 [label="fc1.weight
+ (512, 784)" fillcolor=lightblue]
+	5485281840 -> 5538791632
+	5538791632 [label=AccumulateGrad]
+	5537660640 -> 5537660544
+	5537660640 [label=TBackward0]
+	5537660880 -> 5537660640
+	5485283088 [label="fc2.weight
+ (256, 512)" fillcolor=lightblue]
+	5485283088 -> 5537660880
+	5537660880 [label=AccumulateGrad]
+	5537660160 -> 5537659776
+	5537660160 [label=TBackward0]
+	5537660784 -> 5537660160
+	5485281552 [label="fc3.weight
+ (128, 256)" fillcolor=lightblue]
+	5485281552 -> 5537660784
+	5537660784 [label=AccumulateGrad]
+	5537650656 -> 5537660112
+	5537650656 [label=TBackward0]
+	5537660592 -> 5537650656
+	5485283280 [label="fc4.weight
+ (10, 128)" fillcolor=lightblue]
+	5485283280 -> 5537660592
+	5537660592 [label=AccumulateGrad]
+	5537660112 -> 5538491248
+}
